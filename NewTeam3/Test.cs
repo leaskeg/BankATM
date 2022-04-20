@@ -11,8 +11,13 @@ namespace NewTeam3
         public Test()
         {
             Console.WriteLine("test");
-            Console.WriteLine("hemmelihg");
+            Console.WriteLine("hemmelig");
             Console.WriteLine("ff");
+            boxxBox(2, 4);
+        }
+        public void boxxBox(int BoxxHeight, int BoxxLength)
+        {
+            Console.WriteLine($"Størrelsen på æsken er {BoxxHeight}x{BoxxLength}");
         }
     }
 }
