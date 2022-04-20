@@ -6,9 +6,8 @@ namespace NewTeam3
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
 
-            
+            boxxClass box1 = new boxxClass(23,21);
 
             Console.ReadKey();
         }

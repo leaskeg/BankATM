@@ -8,16 +8,20 @@ namespace NewTeam3
 {
     internal class boxxClass
     {
-        public boxxClass()
+        public boxxClass(int BoxxHeight, int BoxxLength)
         {
-            Console.WriteLine("test");
-            Console.WriteLine("hemmelig");
-            Console.WriteLine("ff");
-            boxxBox(2, 4);
+            boxxBox(BoxxHeight, BoxxLength);
         }
         public void boxxBox(int BoxxHeight, int BoxxLength)
         {
             Console.WriteLine($"Størrelsen på æsken er {BoxxHeight}x{BoxxLength}");
+            for (int i = 0; i < BoxxLength; i++)
+            {
+                Console.BackgroundColor = ConsoleColor.Green;
+                Console.Write(" ");
+                Console.BackgroundColor = ConsoleColor.Black;
+
+            }
         }
     }
 }
