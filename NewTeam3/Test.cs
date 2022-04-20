@@ -11,7 +11,7 @@ namespace NewTeam3
         public Test()
         {
             Console.WriteLine("test");
-            Console.WriteLine("hemmelihg");
+            Console.WriteLine("hemmelig");
             Console.WriteLine("ff");
         }
     }
