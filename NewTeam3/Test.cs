@@ -8,5 +8,9 @@ namespace NewTeam3
 {
     internal class Test
     {
+        public Test()
+        {
+            Console.WriteLine("test");
+        }
     }
 }
