@@ -6,9 +6,9 @@ using System.Threading.Tasks;
 
 namespace NewTeam3
 {
-    internal class Test
+    internal class boxxClass
     {
-        public Test()
+        public boxxClass()
         {
             Console.WriteLine("test");
             Console.WriteLine("hemmelig");
