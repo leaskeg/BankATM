@@ -8,7 +8,6 @@ namespace NewTeam3
         {
             Console.WriteLine("Hello Jens!");
             BankATM bankATM = new BankATM();
-            BankATM.requestPIN();
 
             // Withdraw, Deposit, check balance, exit 
             while (true)
@@ -20,16 +19,6 @@ namespace NewTeam3
                 Console.ReadKey();
                 Console.Clear();
             }
-
-
-
-            
-
-            
-
-            Console.ReadKey();
-            Console.WriteLine("Hello Jens!");
-            BankATM bankATM = new BankATM();
         }
     }
 }
