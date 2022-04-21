@@ -27,7 +27,6 @@ namespace NewTeam3
             string Wall = "│";
             string startButValue = "└";
             string endButValue = "┘";
-            string total;
             string stringEgdeLine = new string('─', dataLength);
             string stringBetweenLine = new string(' ', dataLength);
             String topLine = startTopValue + stringEgdeLine + endTopValue;
@@ -42,7 +41,6 @@ namespace NewTeam3
                 betweenData = Wall + betweenWalldataWall + data + betweenWalldataWall + Wall;
 
             }
-
 
             //box info
             if (info==true)
@@ -69,19 +67,6 @@ namespace NewTeam3
             Console.WriteLine(butLine);
             Console.CursorLeft = posX;
 
-            //lav en grønstreg
-            /*
-            for (int i = 0; i < BoxxLength; i++)
-            {
-                Console.BackgroundColor = ConsoleColor.Green;
-                Console.Write(" ");
-
-                Console.BackgroundColor = ConsoleColor.Black;
-                // en mindre kommentar
-            
-
-            }
-            */
         }
     }
 }
