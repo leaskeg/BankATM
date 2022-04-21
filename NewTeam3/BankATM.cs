@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Drawing;
+
 
 namespace NewTeam3
 {
@@ -16,24 +18,19 @@ namespace NewTeam3
 			int amt = 10000, a, current, pin = 4040, pin1, pin2;
 
 			//read PIN
-			boxxClass boxPass = new boxxClass(false, "Welcome to bank bank Write password", 23, 21, 3, 10);
+			boxxClass boxPass = new boxxClass(false, "Welcome to bank bank, please type your password", 25, 5, 35, 1);
 			pin1 = int.Parse(Console.ReadLine());
 			Console.Clear();
 			//compare PIN
 			if (pin1 == pin)
 			{
 
-				boxxClass box1 = new boxxClass(false, "[1] Check balance   ", 0, 15, 3, 3);
-				boxxClass box2 = new boxxClass(false, "[2] Withdraw money   ", 0, 15, 25, 3);
-				boxxClass box3 = new boxxClass(false, "[3] Deposit money", 0, 15, 47, 3);
-				boxxClass box4 = new boxxClass(false, "[4] Change your password", 0, 15, 69, 3);
-				boxxClass box5 = new boxxClass(false, "[5] Exit      ", 0, 15, 100, 3);
-
-				/*Console.WriteLine("1.Check balance");
-				Console.WriteLine("2.Withdraw money");
-				Console.WriteLine("3.Deposit money");
-				Console.WriteLine("4.Change your password");
-				*/
+				boxxClass box1 = new boxxClass(false, "[1] Check balance   ", 0, 11, 2, 21);
+				boxxClass box2 = new boxxClass(false, "[2] Withdraw money   ", 0, 13, 26, 21);
+				boxxClass box3 = new boxxClass(false, "[3] Deposit money", 0, 15, 51, 21);
+				boxxClass box4 = new boxxClass(false, "[4] Change password", 0, 15, 72, 21);
+				boxxClass box5 = new boxxClass(false, "[5] Exit      ", 0, 15, 95, 21);
+				Console.SetCursorPosition(0, 0);
 				int choice = int.Parse(Console.ReadLine());
 				bool correct = false;
 				do
@@ -41,7 +38,7 @@ namespace NewTeam3
 					switch (choice)
 					{
 						case 1:
-							Console.WriteLine("The current balance in your account is " + amt);
+							Console.WriteLine($"The current balance in your account is {amt}");
 							Console.ReadKey();
 							break;
 
@@ -53,9 +50,9 @@ namespace NewTeam3
 								{
 									if (a % 100 == 0)
 									{
-										Console.WriteLine("Please collect the cash" + a);
+										Console.WriteLine($"Please collect the cash {a}");
 										current = amt - a;
-										Console.WriteLine("The current balance is now" + current);
+										Console.WriteLine($"The current balance is now {current}");
 									}
 									else
 										Console.WriteLine("Please enter the amount to withdraw in the multiples of 100");
@@ -70,7 +67,7 @@ namespace NewTeam3
 							Console.WriteLine("Enter the amount you wish to deposit");
 							a = (int)double.Parse(Console.ReadLine());
 							current = amt + a;
-							Console.WriteLine("The current balance is " + current);
+							Console.WriteLine($"The current balance is {current}");
 							Console.ReadKey();
 							break;
 
