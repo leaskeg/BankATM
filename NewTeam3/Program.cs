@@ -5,7 +5,10 @@ namespace NewTeam3
     internal class Program
     {
         static void Main(string[] args)
-        {//                                                                     H,  L,  X   Y
+        {
+            splashscreen bigSplash = new splashscreen();
+            
+            //                                                                     H,  L,  X   Y
            /* boxxClass box1 = new boxxClass(false, "[1] Withdraw   ",               0, 15 ,3 , 3);
             boxxClass box2 = new boxxClass(false, "[2] Deposit   ",                0, 15, 25 ,3);
             boxxClass box3 = new boxxClass(false, "[3] Check balance",          0, 15,47, 3);
