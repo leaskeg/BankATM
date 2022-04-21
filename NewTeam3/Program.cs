@@ -6,6 +6,10 @@ namespace NewTeam3
     {
         static void Main(string[] args)
         {
+
+            boxxClass box1 = new boxxClass(23,21);
+
+            Console.ReadKey();
             Console.WriteLine("Hello Jacob!");
             
         }
