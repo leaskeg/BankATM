@@ -16,17 +16,24 @@ namespace NewTeam3
 			int amt = 10000, a, current, pin = 4040, pin1, pin2;
 
 			//read PIN
-			Console.WriteLine("Enter the pin");
+			boxxClass boxPass = new boxxClass(false, "Welcome to bank bank Write password", 23, 21, 3, 10);
 			pin1 = int.Parse(Console.ReadLine());
-
+			Console.Clear();
 			//compare PIN
 			if (pin1 == pin)
 			{
-				Console.WriteLine("1.Check balance");
+
+				boxxClass box1 = new boxxClass(false, "[1] Check balance   ", 0, 15, 3, 3);
+				boxxClass box2 = new boxxClass(false, "[2] Withdraw money   ", 0, 15, 25, 3);
+				boxxClass box3 = new boxxClass(false, "[3] Deposit money", 0, 15, 47, 3);
+				boxxClass box4 = new boxxClass(false, "[4] Change your password", 0, 15, 69, 3);
+				boxxClass box5 = new boxxClass(false, "[5] Exit      ", 0, 15, 100, 3);
+
+				/*Console.WriteLine("1.Check balance");
 				Console.WriteLine("2.Withdraw money");
 				Console.WriteLine("3.Deposit money");
 				Console.WriteLine("4.Change your password");
-
+				*/
 				int choice = int.Parse(Console.ReadLine());
 				bool correct = false;
 				do
@@ -36,13 +43,12 @@ namespace NewTeam3
 						case 1:
 							Console.WriteLine("The current balance in your account is " + amt);
 							Console.ReadKey();
-							correct = true;
 							break;
 
 						case 2:
 							Console.WriteLine("How much would you like to withdraw?");
 							{
-								a = int.Parse(Console.ReadLine());
+								a = (int)double.Parse(Console.ReadLine());
 								if (amt >= a)
 								{
 									if (a % 100 == 0)
@@ -62,7 +68,7 @@ namespace NewTeam3
 
 						case 3:
 							Console.WriteLine("Enter the amount you wish to deposit");
-							a = int.Parse(Console.ReadLine());
+							a = (int)double.Parse(Console.ReadLine());
 							current = amt + a;
 							Console.WriteLine("The current balance is " + current);
 							Console.ReadKey();
@@ -84,7 +90,9 @@ namespace NewTeam3
 								Console.WriteLine("Enter your correct password");
 							correct = true;
 							break;
-
+						case 5:
+							Console.WriteLine("Thanks for using Bank Bank");
+							break;
 						default:
 							Console.WriteLine("Error: Wrong choice");
 							Console.ReadKey();
