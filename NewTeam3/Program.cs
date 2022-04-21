@@ -10,7 +10,7 @@ namespace NewTeam3
             boxxClass box1 = new boxxClass(23,21);
 
             Console.ReadKey();
-            Console.WriteLine("Hello Jacob!");
+            Console.WriteLine("Hello Jens!");
             
         }
     }
