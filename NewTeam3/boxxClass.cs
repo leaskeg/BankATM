@@ -8,11 +8,11 @@ namespace NewTeam3
 {
     internal class boxxClass
     {
-        public boxxClass(int BoxxHeight, int BoxxLength)
+        public boxxClass(bool info, string data, int BoxxHeight, int BoxxLength)
         {
-            boxxBox(false, BoxxHeight, BoxxLength);
+            boxxBox(info,data, BoxxHeight, BoxxLength);
         }
-        public void boxxBox(bool info, int BoxxHeight, int BoxxLength)
+        public void boxxBox(bool info,string data, int BoxxHeight, int BoxxLength)
         {
             //varibles
             string startTopValue = "┌";
@@ -21,23 +21,39 @@ namespace NewTeam3
             string startButValue = "└";
             string endButValue = "┘";
             string total;
-            string stringMidLine = new string('─', BoxxLength - 2);
+            string stringEgdeLine = new string('─', BoxxLength);
+            string stringBetweenLine = new string(' ', BoxxLength);
+            String topLine = startTopValue + stringEgdeLine + endTopValue;
+            String butLine = startButValue + stringEgdeLine + endButValue;
+            string betweenLine = Wall + stringBetweenLine + Wall;
+            string betweenData = Wall + data + Wall;
 
             //box info
-            if (true)
+            if (info==true)
             {
                 Console.WriteLine($"Størrelsen på æsken er {BoxxHeight}x{BoxxLength}");
             }
 
             //box generator
+            Console.WriteLine(topLine);
+            Console.WriteLine(betweenLine);
+            Console.WriteLine(betweenData);
+            Console.WriteLine(betweenLine);
+            Console.WriteLine(butLine);
+
+            //lav en grønstreg
+            /*
             for (int i = 0; i < BoxxLength; i++)
             {
                 Console.BackgroundColor = ConsoleColor.Green;
                 Console.Write(" ");
+
                 Console.BackgroundColor = ConsoleColor.Black;
                 // en mindre kommentar
+            
 
             }
+            */
         }
     }
 }
