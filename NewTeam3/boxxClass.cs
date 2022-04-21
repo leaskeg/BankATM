@@ -20,6 +20,7 @@ namespace NewTeam3
                 Console.BackgroundColor = ConsoleColor.Green;
                 Console.Write(" ");
                 Console.BackgroundColor = ConsoleColor.Black;
+                // en mindre kommentar
 
             }
         }
