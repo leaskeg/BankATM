@@ -9,6 +9,8 @@ namespace NewTeam3
 
             boxxClass box1 = new boxxClass(23,21);
 
+            // Withdraw, Deposit, check balance, exit 
+
             Console.ReadKey();
             Console.WriteLine("Hello Jens!");
             
