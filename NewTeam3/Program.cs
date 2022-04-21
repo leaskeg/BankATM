@@ -11,7 +11,8 @@ namespace NewTeam3
 
             Console.ReadKey();
             Console.WriteLine("Hello Jens!");
-            
+            BankATM bankATM = new BankATM();
+            BankATM.requestPIN();
         }
     }
 }
