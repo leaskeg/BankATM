@@ -63,7 +63,7 @@ namespace NewTeam3
 							Console.WriteLine("Enter the amount you wish to deposit");
 							a = int.Parse(Console.ReadLine());
 							current = amt + a;
-							Console.WriteLine("The current balance is" + current);
+							Console.WriteLine("The current balance is " + current);
 							Console.ReadKey();
 							break;
 
@@ -94,7 +94,11 @@ namespace NewTeam3
 
 				} while (correct);
 
-			}
+			} else
+            {
+				Console.WriteLine("Wrong Password");
+				Console.ReadLine();
+            }
 		}
 	}
 }
