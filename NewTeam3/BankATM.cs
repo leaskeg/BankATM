@@ -13,7 +13,7 @@ namespace NewTeam3
 
 		public BankATM()
 		{
-			//Version 1.0.2
+			//Version 1.0.3
 
 			int amt = 10000, a, current, pin = 4040, pin1, pin2;
 
@@ -40,12 +40,12 @@ namespace NewTeam3
 					switch (choice)
 					{
 						case "1":
-							Console.WriteLine($"The current balance in your account is {amt}");
-							Console.ReadKey();
-							correct = true;
+							Console.Clear();
+							Console.WriteLine($"The current balance in your bank account is {amt}");
 							break;
 
 						case "2":
+							Console.Clear();
 							Console.WriteLine("How much would you like to withdraw?");
 							{
 								a = (int)double.Parse(Console.ReadLine());
@@ -53,8 +53,9 @@ namespace NewTeam3
 								{
 									if (a % 100 == 0)
 									{
-										Console.WriteLine($"Please collect the cash {a}");
+										Console.WriteLine($"Remember to collect your money!");
 										current = amt - a;
+                                        Console.WriteLine("");
 										Console.WriteLine($"The current balance is now {current}");
 									}
 									else
@@ -63,18 +64,16 @@ namespace NewTeam3
 								else
 									Console.WriteLine("Your account does not have sufficient balance");
 							}
-							correct = true;
 							break;
 						case "3":
-							Console.WriteLine("Enter the amount you wish to deposit");
+							Console.Clear();
+							Console.WriteLine("Enter the amount you want to deposit");
 							a = (int)double.Parse(Console.ReadLine());
 							current = amt + a;
 							Console.WriteLine($"The current balance is {current}");
-							Console.ReadKey();
-							correct = true;
 							break;
 						case "4":
-							Console.WriteLine("Want to change your password");
+							Console.Clear();
 							Console.WriteLine("Enter your previous password");
 							int prepin = int.Parse(Console.ReadLine());
 							if (prepin == pin)
@@ -83,11 +82,10 @@ namespace NewTeam3
 								pin2 = int.Parse(Console.ReadLine());
 								pin1 = pin2;
 								Console.WriteLine("Your password is changed");
-								Console.ReadKey();
-								correct = true;
+
 							}
 							else
-								Console.WriteLine("Enter your correct password");
+								Console.WriteLine("Enter the correct password");
 							correct = false;
 							break;
 						case "5":
@@ -95,8 +93,7 @@ namespace NewTeam3
 							correct = true;
 							break;
 						default:
-							Console.WriteLine("Error: Wrong choice");
-							Console.ReadKey();
+							Console.WriteLine("Error: Wrong input");
 							Console.Clear();
 							correct = false;
 							break;
