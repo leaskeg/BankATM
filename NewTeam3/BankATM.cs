@@ -18,7 +18,7 @@ namespace NewTeam3
 			int amt = 10000, a, current, pin = 4040, pin1, pin2;
 
 			//read PIN
-			boxxClass boxPass = new boxxClass(false, "Welcome to bank bank, please type your password", 25, 5, 35, 1);
+			boxxClass boxPass = new boxxClass(false, "Welcome to bank bank, please enter your password", 25, 5, 35, 1);
 			pin1 = int.Parse(Console.ReadLine());
 			Console.Clear();
 			//compare PIN
@@ -28,13 +28,17 @@ namespace NewTeam3
 				bool correct = false;
 				while (correct == false)
                 {
-				
+					splashscreen bigSplash = new splashscreen();
+					/*
 					boxxClass box1 = new boxxClass(false, "[1] Check balance   ", 0, 11, 2, 21);
 					boxxClass box2 = new boxxClass(false, "[2] Withdraw money   ", 0, 13, 26, 21);
 					boxxClass box3 = new boxxClass(false, "[3] Deposit money", 0, 15, 51, 21);
 					boxxClass box4 = new boxxClass(false, "[4] Change password", 0, 15, 72, 21);
 					boxxClass box5 = new boxxClass(false, "[5] Exit      ", 0, 15, 95, 21);
-					Console.SetCursorPosition(0, 0);
+					*/
+
+					//Console.SetCursorPosition(0, 0);
+					
 					string choice = Console.ReadLine();
 
 					switch (choice)
@@ -42,6 +46,7 @@ namespace NewTeam3
 						case "1":
 							Console.Clear();
 							Console.WriteLine($"The current balance in your bank account is {amt}");
+							
 							break;
 
 						case "2":
@@ -53,6 +58,7 @@ namespace NewTeam3
 								{
 									if (a % 100 == 0)
 									{
+										Console.Clear();
 										Console.WriteLine($"Remember to collect your money!");
 										current = amt - a;
                                         Console.WriteLine("");
@@ -70,6 +76,7 @@ namespace NewTeam3
 							Console.WriteLine("Enter the amount you want to deposit");
 							a = (int)double.Parse(Console.ReadLine());
 							current = amt + a;
+							Console.Clear();
 							Console.WriteLine($"The current balance is {current}");
 							break;
 						case "4":
